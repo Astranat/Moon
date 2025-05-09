@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Edits | Photoshop & Video Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Project.css">
+</head>
+<body>
+
+    <div class="background-photo"></div>
+    
+
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="fade-in blurred-bg">
+        <h1><span>My Projects</span></h1>
+            <div class="typewriter"><p>Showcasing Photoshop Art & Cinematic Video Edits</p></div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <nav class="slide-in blurred-bg">
+        <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+        <div class="nav-container">
+            <a href="#photoshop"><i class="fas fa-image"></i> <span class="nav-text">Photoshop</span></a>
+            <a href="#videos"><i class="fas fa-video"></i> <span class="nav-text">Videos</span></a>
+        </div>
+    </nav>
+
+    <section id="photoshop" class="gallery-section blurred-bg">
+        <h2 class="section-title">Photoshop <span>Gallery</span></h2>
+        <div class="gallery-container">
+            <button class="scroll-btn left-btn">&lt;</button>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="/Porsche 911 gt3.jpg" alt="Surreal Landscape" loading="lazy">
+                    <div class="overlay">
+                        <h3>Porsche 911 GT3</h3>
+                        <p>Click to enlarge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/MUstang.jpg" alt="Surreal Landscape" loading="lazy">
+                    <div class="overlay">
+                        <h3>Mustang</h3>
+                        <p>Click to enlarge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Ronaldo-Recovered.jpg" alt="Surreal Landscape" loading="lazy">
+                    <div class="overlay">
+                        <h3>Ronaldo</h3>
+                        <p>Click to enlarge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Flower with sky.png" alt="Surreal Landscape" loading="lazy">
+                    <div class="overlay">
+                        <h3>Flower of Beauty</h3>
+                        <p>Click to enlarge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Billie Eilish.jpg" alt="Surreal Landscape" loading="lazy">
+                    <div class="overlay">
+                        <h3>Billie Eilish</h3>
+                        <p>Click to enlarge</p>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="scroll-btn right-btn">&gt;</button>
+        </div>
+    </section>
+    
+    <section id="videos" class="gallery-section blurred-bg">
+        <h2 class="section-title">Video <span>Edits</span></h2>
+        <div class="gallery-container">
+            <button class="scroll-btn left-btn">&lt;</button>
+            <div class="gallery">
+                <div class="video-item" data-video="">
+                    <img src="Coming soon.jpg" alt="Cinematic Trailer" loading="lazy">
+                    <div class="overlay">
+                        <i class="fas fa-play"></i>
+                        <h3>Cinematic Trailer</h3>
+                    </div>
+                </div>
+                <div class="video-item" data-video="">
+                    <img src="Coming soon.jpg" alt="Cinematic Trailer" loading="lazy">
+                    <div class="overlay">
+                        <i class="fas fa-play"></i>
+                        <h3>Cinematic Trailer</h3>
+                    </div>
+                </div>
+                <div class="video-item" data-video="">
+                    <img src="Coming soon.jpg" alt="Cinematic Trailer" loading="lazy">
+                    <div class="overlay">
+                        <i class="fas fa-play"></i>
+                        <h3>Cinematic Trailer</h3>
+                    </div>
+                </div>
+                <div class="video-item" data-video="">
+                    <img src="Coming soon.jpg" alt="Cinematic Trailer" loading="lazy">
+                    <div class="overlay">
+                        <i class="fas fa-play"></i>
+                        <h3>Cinematic Trailer</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn right-btn">&gt;</button>
+        </div>
+    </section>
+
+
+    <div class="video-modal blurred-bg">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="video-frame" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <div class="home-btn-container blurred-bg">
+        <a href="#" class="home-btn">
+            <i class="fas fa-home"></i> Return Home
+        </a>
+    </div>
+
+    <footer class="fade-in blurred-bg">
+        <p>&copy; 2025 My Edits Portfolio | Made with <i class="fas fa-heart"></i> by Naved Rana </p>
+    </footer>
+
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    const videoItems = document.querySelectorAll('.video-item');
+    const videoModal = document.querySelector('.video-modal');
+    const videoFrame = document.getElementById('video-frame');
+    const closeModal = document.querySelector('.close-modal');
+
+    videoItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const videoUrl = item.getAttribute('data-video');
+            videoFrame.src = videoUrl;
+            videoModal.style.display = 'block';
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        videoFrame.src = '';
+        videoModal.style.display = 'none';
+    });
+
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+            videoFrame.src = '';
+            videoModal.style.display = 'none';
+        }
+    });
+
+
+    document.querySelectorAll('.gallery-container').forEach(container => {
+        const gallery = container.querySelector('.gallery');
+        const leftBtn = container.querySelector('.left-btn');
+        const rightBtn = container.querySelector('.right-btn');
+        
+        const updateButtons = () => {
+            leftBtn.classList.toggle('hidden', gallery.scrollLeft === 0);
+            rightBtn.classList.toggle('hidden', 
+                gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 1);
+        };
+        
+        leftBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        
+        rightBtn.addEventListener('click', () => {
+            gallery.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+        
+        gallery.addEventListener('scroll', updateButtons);
+        updateButtons();
+    });
+
+
+    document.querySelector('.home-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    navToggle.addEventListener('click', () => {
+        navContainer.classList.toggle('active');
+    });
+
+
+    document.querySelectorAll('.nav-container a').forEach(link => {
+        link.addEventListener('click', () => {
+            navContainer.classList.remove('active');
+        });
+    });
+
+
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute('src');
+                imageObserver.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '200px 0px'
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+});
+    </script>
+</body>
+</html>
