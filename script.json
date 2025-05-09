@@ -1,0 +1,11 @@
+{
+    "animation": "bounce",
+    "duration": 1.5,
+    "iterations": "infinite",
+    "keyframes": [
+      { "transform": "translateY(0)", "opacity": 1, "offset": 0 },
+      { "transform": "translateY(0)", "opacity": 1, "offset": 0.4 },
+      { "transform": "translateY(-10px)", "opacity": 0.8, "offset": 0.6 },
+      { "transform": "translateY(0)", "opacity": 1, "offset": 1 }
+    ]
+  }

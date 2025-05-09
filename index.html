@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOON</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <header class="fix">
+        <div class="logo">MOON</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="404.html">Projects</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="404.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main >
+        <h1 class="floating-title">Professional Editor</h1>
+        <p>Your Vision, Enhanced – One Edit at a Time.</p>
+        <a href="404.html" class="btn">View My Work</a>
+        <div class="social-icons">
+
+            <a href="https://github.com/Astranat" target="_blank">
+              <img src="icons8-github-logo-30.png" alt="GitHub" title="GitHub">
+            </a>
+            
+            <a href="https://instagram.com/rana.nr2" target="_blank">
+              <img src="icons8-instagram-50.png" alt="Instagram" title="Instagram">
+            </a>
+            
+            <a href="https://www.linkedin.com/in/naved-rana-b57384282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+              <img src="icons8-linkedin-50.png" alt="LinkedIn" title="LinkedIn">
+            </a>
+          </div>
+
+        <div class="arrow">
+            <a href="#" class="arrow-down" aria-label="Scroll down"></a>
+
+        </div>
+    </main>
+    <section id="about">
+        <div class="about-me">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="Naved Rana.png" alt="Your Name" class="profile-img">
+                    </div>
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p class="bio">
+                          I'm Naved Rana, a student and freelancer skilled in Photoshop, After Effects, and coding with VS Code. 
+                          I create stunning visuals, edit videos, and build responsive websites with a creative edge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="portfolio-wrapper">
+      <div class="portfolio-divider">
+          <div class="divider-line-style"></div>
+              <i class="fas fa-star divider-icon-style"></i>
+          <div class="divider-line-style"></div>
+      </div>
+
+      <div class="skills-section">
+          <!-- Left Skills Column -->
+          <div class="skills-block">
+              <div class="skill-entry">
+                  <div class="skill-top">
+                      <div class="skill-label">
+                          <i class="fas fa-paint-brush skill-icon-style"></i>
+                          Photoshop
+                      </div>
+                      <div class="skill-percent">90%</div>
+                  </div>
+                  <div class="progress-wrapper">
+                      <div class="progress-fill" data-width="90"></div>
+                  </div>
+              </div>
+
+              <div class="skill-entry">
+                  <div class="skill-top">
+                      <div class="skill-label">
+                          <i class="fas fa-cube skill-icon-style"></i>
+                          After Effects
+                      </div>
+                      <div class="skill-percent">80%</div>
+                  </div>
+                  <div class="progress-wrapper">
+                      <div class="progress-fill" data-width="80"></div>
+                  </div>
+              </div>
+
+              <div class="skill-entry">
+                  <div class="skill-top">
+                      <div class="skill-label">
+                          <i class="fas fa-search skill-icon-style"></i>
+                          Research
+                      </div>
+                      <div class="skill-percent">85%</div>
+                  </div>
+                  <div class="progress-wrapper">
+                      <div class="progress-fill" data-width="85"></div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Right Skills Column -->
+          <div class="skills-block">
+              <div class="skill-entry">
+                  <div class="skill-top">
+                      <div class="skill-label">
+                          <i class="fas fa-code skill-icon-style"></i>
+                          Coding
+                      </div>
+                      <div class="skill-percent">60%</div>
+                  </div>
+                  <div class="progress-wrapper">
+                      <div class="progress-fill" data-width="60"></div>
+                  </div>
+              </div>
+
+              <div class="skill-entry">
+                  <div class="skill-top">
+                      <div class="skill-label">
+                          <i class="fas fa-magic skill-icon-style"></i>
+                          Posters and Video Editing
+                      </div>
+                      <div class="skill-percent">95%</div>
+                  </div>
+                  <div class="progress-wrapper">
+                      <div class="progress-fill" data-width="95"></div>
+                  </div>
+              </div>
+
+              <div class="skill-entry">
+                  <div class="skill-top">
+                      <div class="skill-label">
+                          <i class="fas fa-tools skill-icon-style"></i>
+                          Tools
+                      </div>
+                  </div>
+                  <div class="tool-list">
+                      <span class="tool-item-style">Pinterest</span>
+                      <span class="tool-item-style">Shopify</span>
+                      <span class="tool-item-style">VScode</span>
+                      <span class="tool-item-style">Figma</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Animate progress bars
+          const progressBars = document.querySelectorAll('.progress-fill');
+          progressBars.forEach(bar => {
+              const width = bar.getAttribute('data-width');
+              setTimeout(() => {
+                  bar.style.width = width + '%';
+              }, 300);
+          });
+
+          // Add hover effect to skill items
+          const skillItems = document.querySelectorAll('.skill-entry');
+          skillItems.forEach(item => {
+              item.addEventListener('mouseenter', function() {
+                  this.querySelector('.skill-icon-style').style.transform = 'scale(1.2)';
+              });
+              item.addEventListener('mouseleave', function() {
+                  this.querySelector('.skill-icon-style').style.transform = 'scale(1)';
+              });
+          });
+      });
+  </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="logo">
+            <img src="Naved Rana.png" alt="Logo" />
+            <span>Naved Rana</span>
+          </div>
+          
+          <ul class="footer-links">
+            <li><a href="/404.html">Terms of Service</a></li>
+            <li><a href="/404.html">Privacy Policy</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://instagram.com/rana.nr2"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Astranat"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+    
+          <p class="copyright">© 2025 Naved Rana. All rights reserved.</p>
+        </div>
+      </footer>
+    <script>
+        fetch('script.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Animation data loaded:', data);
+            });
+    </script>
+</body>
+</html>
